@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import SEO from "./components/seo";
+import Gallery from "./components/gallery";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,9 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-100 min-h-screen flex flex-col">
         <Navbar/>
         {children}
+        <Gallery/>
         <SEO/>
         <Footer/>
       </body>
